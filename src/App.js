@@ -1,25 +1,49 @@
-import logo from './logo.svg';
+
 import './App.css';
+import FactorTree from './components/FactorTree/FactorTree';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <FactorTree/>
     </div>
   );
 }
-
+const factorTreedata = {
+  root:{
+    value: 360,
+    left: {
+      value: 2,
+    },
+    right: {
+      value: 180,
+      left: {
+        value: 2,
+      },
+      right: {
+        value: 90,
+        left: {
+          value: 2
+        },
+        right: {
+          value: 45,
+          left: {
+            value: 5
+          },
+          right: {
+            value: 9,
+            left: {
+              value: 3
+            },
+            right: {
+              value: 3,
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
 export default App;
+ 
